@@ -18,6 +18,7 @@ nav img {
     
 }
 nav ul {
+    font-size: 1vw;
     font-weight: 900;
     display: flex;
     list-style: none;
