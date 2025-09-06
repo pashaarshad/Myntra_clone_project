@@ -1,10 +1,41 @@
 let bagItemObj;
+const CONVENIENCE_FEE = 99;
 onLoad();
 
 function onLoad() {
     loadBagItemsObj();
     displayBagItems();
     dispayBag();
+    dispayBagSummary();
+}
+
+
+
+function dispayBagSummary() {
+    let bagSummary = document.querySelector(".summary");
+    let totalItems = bagItemObj.length;
+    let totalMRP = 0;
+    let totalDiscount = 0;
+    let finalPaymet = 0;
+
+   bagItemObj.forEach(bagItems => {
+        totalMRP += bagItems.original_price;
+        totalDiscount += (bagItems.original_price - bagItems.current_price);
+    });
+
+    finalPaymet = totalMRP - totalDiscount + CONVENIENCE_FEE;
+
+    bagSummary.innerHTML = `
+              <h3>PRICE DETAILS (${totalItems} Items)</h3>
+                <br>
+                <h5>Total MRP <span class="summary-amm">₹ ${totalMRP}</span></h5>
+                <h5>Discount on MRP <span class="summary-amm">₹ ${totalDiscount}</span></h5>
+                <h5>Convenience Fee <span class="summary-amm">₹ 99 </span> </h5>
+                <hr>
+                <h2>Total Amount <span class="summary-amm">₹ ${finalPaymet}</span></h2>
+                <br>
+                <button class="btn-po"> PLACE ORDER</button>
+    `;
 }
 
 function loadBagItemsObj() {
@@ -58,4 +89,7 @@ function generateItemHTML(item) {
                 </div>
     
     `;
+
+    
 }
+
