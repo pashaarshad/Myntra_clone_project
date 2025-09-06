@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Myntra Clone</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Myntra Clone page for Bag</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="images/myntra_logo.webp" alt="LOGO">
+            <img src="../images/myntra_logo.webp" alt="LOGO">
             <ul>
                 <li>MEN</li>
                 <li>WOMEN</li>
@@ -22,33 +22,47 @@
 
             </ul>
             <div class="Search">
-                <img src="images/search.png" alt="">
+                <img src="../images/search.png" alt="">
                 <input class="Search" placeholder="Search for Products brands and more">
             </div>
 
             <div class="right">
                 <ul>
-                    <li><img src="images/profile.png" alt="profile">
+                    <li><img src="../images/profile.png" alt="profile">
                         <h6>profile</h6>
                     </li>
-                    <li><img src="images/like.png" alt="Wishlist">
+                    <li><img src="../images/like.png" alt="Wishlist">
                         <h6>Wishlist</h6>
                     </li>
-                   <a href="pages/bag.html">
-                     <li><img src="images/bag.png" alt="Bag">
-                        <h6>Bag</h6>
-                        <span class="bag-count">0</span>
-                        
-                    </li>
-                   </a>
+                    <a href="bag.html">
+                        <li><img src="../images/bag.png" alt="Bag">
+                            <h6>Bag</h6>
+                            <span class="bag-count">0</span>
+
+                        </li>
+                    </a>
                 </ul>
             </div>
         </nav>
 
     </header>
     <main>
-        <div class="items-con">
+        <div class="bags">
+            <div class="items">
+    
+            </div>
             
+            <div class="summary">
+                <h3>PRICE DETAILS (0 Items)</h3>
+                <br>
+                <h5>Total MRP <span class="summary-amm">RS 2423</span></h5>
+                <h5>Discount on MRP <span class="summary-amm">3453 </span></h5>
+                <h5>Convenience Fee <span class="summary-amm">dsfs</span> </h5>
+                <hr>
+                <h2>Total Amount <span class="summary-amm">345</span></h2>
+                <br>
+                <button class="btn-po"> PLACE ORDER</button>
+            </div>
         </div>
     </main>
     <footer>
@@ -86,8 +100,9 @@
             <h3>Myntra Insider</h3>
         </div>
     </footer>
-    <script src="data/items.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="../data/items.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/bag.js"></script>
 </body>
 
 </html>
