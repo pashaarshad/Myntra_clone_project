@@ -161,52 +161,248 @@ nav ul a{
     color: white; 
 }
 .items{
-    width: 40%;
-    display: fl;
+    width: 65%;
+    display: flex;
     flex-direction: column;
-    height: 70vh;
-    /* overflow: scroll; */
-    margin: 10px;
-    border: 1px solid black;
-    height: auto;
-    padding: 20px 20px;
-    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(40, 44, 63, 0.07);
+    height: fit-content;
 }
 .item{
     display: flex;
     width: 100%;
-    height: auto;
-    margin-top: 20px;
-    /* border: 2px solid red; */
+    padding: 16px 0;
+    border-bottom: 1px solid #eaeaec;
+    position: relative;
 }
+
+.item:last-child {
+    border-bottom: none;
+}
+
 .img_item{
-    width: 100px;
-    margin-right: 20px;
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 16px;
+    border-radius: 4px;
 }
+
+.itme-con {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.remove-item{
+    position: absolute;
+    top: 16px;
+    right: 0;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 4px 8px;
+    border: 1px solid #d4d5d9;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #94969f;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.remove-item:hover{
+    background-color: #ff3f6c;
+    color: white;
+    border-color: #ff3f6c;
+}
+
 .days{
-    color: red;
+    color: #ff3f6c;
+    font-weight: 600;
 }
+
 .delivery{
-    color: blue;
+    color: #03a685;
+    font-weight: 600;
+}
+
+.empty-bag {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-bag-icon {
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.empty-bag h3 {
+    color: #282c3f;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.empty-bag p {
+    color: #94969f;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.continue-shopping {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff3f6c, #ff6b35);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.continue-shopping:hover {
+    background: linear-gradient(45deg, #e6395f, #e55a2b);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 63, 108, 0.3);
 }
 .bags{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .bags {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    
+    .summary {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .items {
+        width: 100%;
+    }
 }
 
 .summary{
     width: 30%;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(40, 44, 63, 0.07);
+    height: fit-content;
+    margin-top: 20px;
 }
-.summary-amm{
-    margin-left: 80px;
-    width: 80%;
+
+.summary-header {
+    background-color: #f8f9fa;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 8px 8px 0 0;
 }
-.btn-po{
-    background-color: rgb(255, 67, 98);
+
+.summary-header h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.item-count {
+    color: #ff3f6c;
+}
+
+.summary-content {
+    padding: 20px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.price-label {
+    color: #282c3f;
+    font-weight: 400;
+}
+
+.price-value {
+    color: #282c3f;
+    font-weight: 500;
+}
+
+.discount-amount {
+    color: #03a685 !important;
+}
+
+.convenience-fee {
+    color: #ff905a;
+}
+
+.summary-divider {
     border: none;
-    padding:  10px 20px;
+    border-top: 1px dashed #d4d5d9;
+    margin: 16px 0;
+}
+
+.total-row {
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding-top: 16px;
+    border-top: 1px solid #e9ecef;
+}
+
+.total-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #282c3f;
+}
+
+.total-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #282c3f;
+}
+
+.btn-place-order {
+    width: 100%;
+    background: linear-gradient(45deg, #ff3f6c, #ff6b35);
+    border: none;
+    padding: 14px 20px;
     color: white;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0 0 8px 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-place-order:hover {
+    background: linear-gradient(45deg, #e6395f, #e55a2b);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 63, 108, 0.3);
+}
+
+.btn-place-order:active {
+    transform: translateY(0);
 }
 .remove-item{
     margin-left: auto;
