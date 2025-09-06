@@ -293,3 +293,16 @@ nav ul a{
     background-color: red;
     color: white;
 }
+.arshad{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #282c3f;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: -160%;
+    left: 0;
+}
